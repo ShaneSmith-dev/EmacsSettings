@@ -1,0 +1,25 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Weekly"
+ (filename . "~/Documents/agenda/work.org")
+ (front-context-string . "#+BEGIN: clockta")
+ (rear-context-string . "END:\n\n** Weekly\n")
+ (position . 57830))
+("org-capture-last-stored-marker"
+ (filename . "~/agenda/genesis.org")
+ (front-context-string . "** TODO Do lengh")
+ (rear-context-string . "ISSUE:GENESIS:\n\n")
+ (position . 39))
+("org-refile-last-stored"
+ (filename . "~/agenda/work.org")
+ (front-context-string . "** DONE [[https:")
+ (rear-context-string . "        :ISSUE:\n")
+ (position . 91516))
+("org-capture-last-stored"
+ (filename . "~/.notes")
+ (front-context-string . "** TODO Project ")
+ (rear-context-string)
+ (position . 9))
+)
