@@ -6,4 +6,5 @@
 *.elc
 auto-save-list
 tramp
+*.last
 .\#*
