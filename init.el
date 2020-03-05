@@ -1,11 +1,43 @@
 
+;;(add-to-list 'load-path "~/helm-master")
+
+;;(require 'helm)
+;;(require 'package)
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;;(package-initialize)
+
+
 (require 'org)
 
 (global-set-key (kbd "<f12>") 'org-agenda)
 
-
 (ido-mode t) ;; turns on auto complete when searching for file and directories using C-x C-f
+(setq ido-everywhere-t t)
+; (setq org-refile-use-outline-path t)
 
+;; Load the Jira api settings file
+(load-file "C:/ControlRepos/py_jira/init-jira.el")
+
+;; Setting up backup files to happen in a specific directory rather than the source directory
+(defvar --backup-directory (concat user-emacs-directory "backups"))
+(if (not (file-exists-p --backup-directory))
+        (make-directory --backup-directory t))
+(setq backup-directory-alist `(("." . ,--backup-directory)))
+(setq make-backup-files t               ; backup of a file the first time it is saved.
+      backup-by-copying t               ; don't clobber symlinks
+      version-control t                 ; version numbers for backup files
+      delete-old-versions t             ; delete excess backup files silently
+      delete-by-moving-to-trash t
+      kept-old-versions 6               ; oldest versions to keep when a new numbered backup is made (default: 2)
+      kept-new-versions 9               ; newest versions to keep when a new numbered backup is made (default: 2)
+      auto-save-default t               ; auto-save every buffer that visits a file
+      auto-save-timeout 20              ; number of seconds idle time before auto-save (default: 30)
+      auto-save-interval 200            ; number of keystrokes between auto-saves (default: 300)
+      )
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -14,18 +46,8 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
    (quote
-    ("~/agenda/work.org"
-     "~/agenda/time_off.org"
-     "~/agenda/refile.org"
-     "~/agenda/prof_dev.org"
-     "~/agenda/prod_support.org"
-     "~/agenda/proc_imp.org"
-     "~/agenda/notes.org"
-     "~/agenda/meetings.org"
-     "~/agenda/hed_od.org"
-     "~/agenda/genesis_od.org"
-     "~/agenda/email.org"
-     "~/agenda/contacts.org"))))
+    ("~/agenda/work.org" "~/agenda/time_off.org" "~/agenda/refile.org" "~/agenda/prof_dev.org" "~/agenda/prod_supp.org" "~/agenda/proc_imp.org" "~/agenda/notes.org" "~/agenda/meetings.org" "~/agenda/hed_od.org" "~/agenda/genesis_od.org" "~/agenda/email.org" "~/agenda/contacts.org")))
+ '(package-selected-packages (quote (rainbow-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -34,12 +56,22 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; This command sets lines to wrap around in org-mode
+(setq org-startup-truncated nil)
+
+;; This command is supposed to make paragraph wrapping better
+(setq org-startup-indented t)
 
 ;; Sometimes I change tasks I'm clocking quickly - this removes clocked tasks with 0:00 duration
 (setq org-clock-out-remove-zero-time-clocks t)
 
 ;; This sets compact-blocks to false, so I have the dividing lines
 (setq org-agenda-compact-blocks nil)
+
+;; Set up org-states
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)" "NEXT(n)" "OTHER" "BACKLOG(b)" "|" "DONE(d)" "DELEGATED(g/!)" )
+              (sequence "EMAIL(e)" "TIMEOFF(v)" "WAITING(w@/!)" "MEETING" "|" "CANCELLED(c/!)"))))
 
 ;; This builds a custom agenda view, set up to trigger with the spacebar, " " and having REFILE
 ;; right below the week agenda. That is followed by tasks, then a section for notes. 
@@ -49,7 +81,7 @@
 		(tags "REFILE"
 		      ((org-agenda-overriding-header "Task to Refile")
 		       (org-tags-match-list-sublevels nil)))
-		(tags-todo "-REFILE-CANCELLED-WAITING-HOLD-Notes-TIME_OFF/!"
+		(tags-todo "-REFILE-CANCELLED-WAITING-HOLD-Notes-MEETING-TIME_OFF/!"
 			   ((org-agenda-overriding-header "Standalone Tasks")
 			    (org-agenda-sorting-strategy 
 			     '(category-keep))))
@@ -57,6 +89,10 @@
 			    ((org-agenda-overriding-header "Notes")
 			     (org-agenda-sorting-strategy
 			      '(category-keep))))
+		(tags-todo "MEETING"
+			   ((org-agenda-overriding-header "Meetings")
+			    (org-agenda-sorting-strategy
+			     '(category-keep))))
 		(tags-todo "TIME_OFF"
 			   ((org-agenda-overriding-header "Time Off")
 			    (org-agenda-sorting-strategy
@@ -66,11 +102,18 @@
 
 (require 'calendar)
 
+;; This is supposed to clear scheduled entries when the task is marked as done
+(setq org-agenda-skip-scheduled-if-done t)
+
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+				 (org-agenda-files :maxlevel . 9))))
 ;; Clock setup
 (setq org-clock-history-length 23)
+(setq org-completion-use-ido t)
 (setq org-clock-in-resume t)
 (setq org-log-done (quote time))
 (setq org-log-into-drawer nil) ; Doesn't put time logged into a drawer
+(setq org-clock-into-drawer nil) ; Doesn't log time into a drawer
 (setq org-log-state-notes-insert-after-drawers nil)
 (setq org-clock-out-remove-zero-time-clocks t)
 (setq org-clock-persist t)
@@ -103,37 +146,42 @@
 ;;; Commentary:
 
 ;;; Code:
+ 
+;; (load-file "<filepath>")
+
+(setq org-todo-keyword-faces
+      '(("MEETING" . (:foreground "#EB8C00" :weight bold))))
 
 (deftheme vscode-dark-plus)
 (let ((class '((class color) (min-colors 89)))
-      (fg0     "#AEAFAD")
-      (fg1     "#d4d4d4")
-      (fg2     "#e8e8e8")
-      (fg3     "#f4f4f4")
-      (fg4     "#fafafa")
-      (bg00    "#000000")
-      (bg0     "#111111")
-      (bg1     "#1e1e1e")
-      (bg2     "#252526")
-      (bg3     "#313131")
-      (bg4     "#4b474c")
-      (bg-hl   "#124f7b")
-      (tw-r    "#A41511")
-      (tw-g    "#4A7F00")
-      (tw-b    "#207FA1")
-      (key2    "#db8e73")
-      (key3    "#85ddff")
-      (accent  "#ffffff")
-      (builtin "#d4d4d4")
-      (keyword "#339cdb")
-      (const   "#339CDB")
-      (comment "#579C4C")
-      (doc     "#777778")
-      (func    "#D9DAA2")
-      (str     "#DB8E73")
-      (type    "#35CDAF")
-      (var     "#85DDFF")
-      (warning "#ef2929"))
+      (fg0     "#AEAFAD") ; Grey
+      (fg1     "#d4d4d4") ; Light grey
+      (fg2     "#e8e8e8") ; Very light grey
+      (fg3     "#f4f4f4") ; Very light grey?
+      (fg4     "#fafafa") ; Very light grey?
+      (bg00    "#000000") ; Black
+      (bg0     "#111111") ; Black
+      (bg1     "#1e1e1e") ; Black
+      (bg2     "#252526") ; Black
+      (bg3     "#313131") ; Light black?
+      (bg4     "#4b474c") ; Dark grey
+      (bg-hl   "#124f7b") ; Dark blue
+      (tw-r    "#A41511") ; Dark red
+      (tw-g    "#4A7F00") ; Dark green
+      (tw-b    "#207FA1") ; Cyan
+      (key2    "#db8e73") ; Salmon
+      (key3    "#85ddff") ; Light blue
+      (accent  "#ffffff") ; White
+      (builtin "#d4d4d4") ; Light grey
+      (keyword "#339cdb") ; Lightish blue
+      (const   "#339CDB") ; Lightish blue
+      (comment "#579C4C") ; Green
+      (doc     "#777778") ; Dark grey
+      (func    "#D9DAA2") ; Tan
+      (str     "#DB8E73") ; Salmon
+      (type    "#35CDAF") ; Blue green
+      (var     "#85DDFF") ; Light blue
+      (warning "#ef2929")); Red
   (custom-theme-set-faces
    'vscode-dark-plus
    `(default                                  ((,class (:background ,bg1 :foreground ,fg1))))
@@ -195,8 +243,9 @@
    `(org-block                                ((,class (:foreground ,fg2 :background ,bg0 :extend t))))
    `(org-quote                                ((,class (:inherit org-block :slant italic))))
    `(org-verse                                ((,class (:inherit org-block :slant italic))))
-   `(org-todo                                 ((,class (:box (:line-width 1 :color ,fg3) :foreground ,keyword :bold t))))
-   `(org-done                                 ((,class (:box (:line-width 1 :color ,bg3) :bold t :foreground ,bg4))))
+   `(org-todo                                 ((,class (:foreground ,warning :bold t))))
+   `(org-done                                 ((,class (:bold t :foreground ,comment))))
+   `(org-meeting                              ((,class (:foreground ,tw-b :bold t))))
    `(org-warning                              ((,class (:underline t :foreground ,warning))))
    `(org-agenda-structure                     ((,class (:weight bold :foreground ,fg3 :box (:color ,fg4) :background ,bg3))))
    `(org-agenda-date                          ((,class (:foreground ,var :height 1.1 ))))

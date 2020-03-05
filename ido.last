@@ -2,6 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("~/" . ".emacs.d/")
+ ("c:/Users/srsmith/AppData/" . "Roaming/")
+ ("c:/Users/srsmith/" . "AppData/")
+ ("c:/Users/" . "srsmith/")
  ("c:/ControlRepos/" . "py_jira/")
  ("c:/" . "ControlRepos/")
  ("c:/Users/srsmith/AppData/Roaming/" . ".emacs.d/")
@@ -9,44 +13,52 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "c:/Users/srsmith/AppData/Roaming/.emacs.d/"
  "c:/Users/srsmith/AppData/Roaming/agenda/"
+ "c:/Users/srsmith/AppData/Roaming/.emacs.d/"
  "c:/ControlRepos/py_jira/"
+ "c:/Users/srsmith/AppData/Roaming/"
+ "~/.emacs.d/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "norang.el"
- "blankmode.el"
- "tlc.el"
- "org-habit.el"
- "notes.org"
- "contacts.org"
- "main.py"
- "altec_bundle"
  "meetings.org"
+ "prod_supp.org"
+ "work.org"
+ "init.el"
+ "init-jira.el"
+ "refile.org"
+ "main.py"
+ "jira_api.py"
+ "norang.el"
+ "org-habit.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/srsmith/AppData/Roaming/.emacs.d/" (24139 3364 0 0) "tlc.el" "org-habit.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/srsmith/AppData/Roaming/agenda/" (24157 33210 0 0) "work.org" "time_off.org" "refile.org" "prof_dev.org" "prod_supp.org" "proc_imp.org" "notes.org" "meetings.org" "hed_od.org" "genesis_od.org" "email.org" "contacts.org" ".#work.org" "#work.org#" "../" "./")
 
- ("c:/Users/srsmith/AppData/Roaming/agenda/" (24139 4481 0 0) "work.org~" "work.org" "time_off.org~" "time_off.org" "refile.org~" "refile.org" "prof_dev.org~" "prof_dev.org" "prod_support.org~" "prod_support.org" "proc_imp.org~" "proc_imp.org" "notes.org~" "notes.org" "meetings.org~" "meetings.org" "hed_od.org" "genesis_od.org" "email.org" "contacts.org" ".gitignore" ".git/" ".#proc_imp.org" "#proc_imp.org#" "#!Org Agenda!#" "../" "./")
+ ("~/.emacs.d/" (24156 39018 0 0) "tlc.el" "org-habit.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "helm-master/" "elpa/" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "backups/" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/srsmith/AppData/Roaming/.emacs.d/" (24156 39018 0 0) "tlc.el" "org-habit.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "helm-master/" "elpa/" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "backups/" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
+
+ ("c:/ControlRepos/py_jira/" (24153 46841 0 0) "__pycache__/" "time_config.py" "tests/" "setup.py" "secrets.py" "requirements.txt" "references/" "README.md" "py_jira/" "orgnode.py" "issue_prefs.json" "init-jira.el" "config.py" "cache/" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/srsmith/AppData/Roaming/" (24147 54268 0 0) "Zoom/" "ZEON/" "Yammer/" "X-Rite/" "webex/" "Visual Studio Code/" "Vector/" "TortoiseSVN/" "TortoiseHg/" "TortoiseGit/" "ToolboxManager/" "Sun/" "Subversion/" "Sublime Text 3/" "Spotify/" "SolidWorks/" "Skype/" "simulink_build_script_gen.txt" "ScreenToGif/" "S-1-5-21-2092466158-773749350-860360866-52562-dmpu" "S-1-5-21-2092466158-773749350-860360866-52562-dm2" "S-1-5-21-2092466158-773749350-860360866-52562" "S-1-5-20-dmpu" "S-1-5-20-dm2" "S-1-5-19-dmpu" "S-1-5-19-dm2" "S-1-5-18-dmpu" "S-1-5-18-dm2" "S-1-5-18" "QlikTech/" "Python/" "PwrMgr/" "nView_Wallpaper/" "NVIDIA/" "nuanreg-dmpu" "nuanreg-dm2" "nuanreg" "Nuance/" "Mozilla/" "MotoTron/" "Microsoft Teams/" "Microsoft/" "Media Center Programs/" "MathWorks/" "Macromedia/" "LGHUB/" "Lenovo/" "Kvaser/" "JetBrains/" "Jedi/" "Intel/" "inkscape/" "Identities/" "Greenshot/" "FLEXnet/" "EDrawings/" "Dual Monitor Tools/" "DraftSight/" "DassaultSystemes/" "Dassault Systemes/" "Corsair/" "Code/" "CCPSignalHolder.m" "ATT Connect/" "Apple Computer/" "Altec_Rainmeter/" "AltecToolManagerDev/" "AltecToolManager/" "AltecMATLABFiles/" "agenda/" "Adobe/" ".notes~" ".notes" ".emacs.d/" ".DEFAULT-dmpu" ".DEFAULT-dm2" ".DEFAULT" "../" "./")
+
+ ("~/" (24142 58522 0 0) "Zoom/" "ZEON/" "Yammer/" "X-Rite/" "webex/" "Visual Studio Code/" "Vector/" "TortoiseSVN/" "TortoiseHg/" "TortoiseGit/" "ToolboxManager/" "Sun/" "Subversion/" "Sublime Text 3/" "Spotify/" "SolidWorks/" "Skype/" "simulink_build_script_gen.txt" "ScreenToGif/" "S-1-5-21-2092466158-773749350-860360866-52562-dmpu" "S-1-5-21-2092466158-773749350-860360866-52562-dm2" "S-1-5-21-2092466158-773749350-860360866-52562" "S-1-5-20-dmpu" "S-1-5-20-dm2" "S-1-5-19-dmpu" "S-1-5-19-dm2" "S-1-5-18-dmpu" "S-1-5-18-dm2" "S-1-5-18" "QlikTech/" "Python/" "PwrMgr/" "nView_Wallpaper/" "NVIDIA/" "nuanreg-dmpu" "nuanreg-dm2" "nuanreg" "Nuance/" "Mozilla/" "MotoTron/" "Microsoft Teams/" "Microsoft/" "Media Center Programs/" "MathWorks/" "Macromedia/" "LGHUB/" "Lenovo/" "Kvaser/" "JetBrains/" "Intel/" "inkscape/" "Identities/" "Greenshot/" "FLEXnet/" "EDrawings/" "Dual Monitor Tools/" "DraftSight/" "DassaultSystemes/" "Dassault Systemes/" "Corsair/" "Code/" "CCPSignalHolder.m" "ATT Connect/" "Apple Computer/" "Altec_Rainmeter/" "AltecToolManagerDev/" "AltecToolManager/" "AltecMATLABFiles/" "agenda/" "Adobe/" ".notes~" ".notes" ".emacs.d/" ".DEFAULT-dmpu" ".DEFAULT-dm2" ".DEFAULT" "../" "./")
+
+ ("c:/ControlRepos/" (24142 57748 0 0) "simulink_builder/" "Shane_Test/" "RabbitHole/" "py_jira/" "MBDTemplates/" "LMAPVerifier/" "LibStrucProp/" "LibraryBlocks/" "kvaserccpformatter/" "iCADI/" "hed_target/" "genesis_target/" "Fremont/" "ESeriesBR/" "ESeriesAR/" "Crexodus/" "Corvette/" "Claptrap/" "BlocksetDesignerTest/" "alpycan_tools/" "../" "./")
+
+ ("c:/Users/srsmith/" (24145 39338 0 0) "workspace/" "Videos/" "VIA/" "ti/" "Templates/" "Teamcenter/" "Start Menu/" "Siemens/" "SendTo/" "Searches/" "Saved Games/" "Roaming/" "Recent/" "PrintHood/" "pmdb.json" "Pictures/" "OneDrive - Altec Ind/" "OneDrive/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "MicrosoftEdgeBackups/" "Mercurial.ini" "Local Settings/" "Links/" "IntelGraphicsProfiles/" "Intel/" "FCCCache/" "fcc.873356132579439739.log.lck" "fcc.873356132579439739.log" "Favorites/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".TI/" ".ssh/" ".srsmith_lock_RO-PC0H397J/" ".QtWebEngineProcess/" ".PyCharmCE2017.1/" ".onion/" ".LSC/" ".kdiff3rc" ".idlerc/" ".gitconfig" ".easyhg/" ".config/" ".cisco/" ".bash_history" ".altec-hg/" "../" "./")
+
+ ("c:/emacs/" (24123 20611 0 0) "ssl/" "share/" "libexec/" "lib/" "include/" "etc/" "bin/" "../" "./")
 
  ("c:/emacs/bin/" (24124 36441 0 0) "zlib1.dll" "xzmore" "xzless" "xzgrep" "xzfgrep" "xzegrep" "xzdiff" "xzdec.exe" "xzcmp" "xzcat.exe" "xz.exe" "xmlwf.exe" "xmllint.exe" "xmlcatalog.exe" "xml2-config" "xgettext.exe" "x86_64-w64-mingw32-tset.exe" "x86_64-w64-mingw32-tput.exe" "x86_64-w64-mingw32-toe.exe" "x86_64-w64-mingw32-tic.exe" "x86_64-w64-mingw32-tabs.exe" "x86_64-w64-mingw32-reset.exe" "x86_64-w64-mingw32-infotocap.exe" "x86_64-w64-mingw32-infocmp.exe" "x86_64-w64-mingw32-clear.exe" "x86_64-w64-mingw32-captoinfo.exe" "x86_64-w64-mingw32-agrep.exe" "wrjpgcom.exe" "wish86.exe" "wish.exe" "update-ca-trust" "unxz.exe" "TUTORIAL~" "TUTORIAL" "trust.exe" "transicc.exe" "tk86.dll" "tjbench.exe" "tificc.exe" "tiffsplit.exe" "tiffset.exe" "tiffmedian.exe" "tiffinfo.exe" "tiffdump.exe" "tiffdither.exe" "tiffcrop.exe" "tiffcp.exe" "tiffcmp.exe" "tiff2rgba.exe" "tiff2ps.exe" "tiff2pdf.exe" "tiff2bw.exe" "tclsh86.exe" "tclsh.exe" "tcl86.dll" "ssleay32.dll" "srptool.exe" "sqlite3_analyzer.sh" "sexp-conv.exe" "runemacs.exe" "rsvg-view-3.exe" "rsvg-convert.exe" "recode-sr-latin.exe" "rdjpgcom.exe" "raw2tiff.exe" "python2w.exe" "python2.exe" "python2.7.exe" "python2.7-config" "python2-config" "python.exe" "python-config.sh" "python-config-u.sh" "python-config" "pydoc" "psktool.exe" "psicc.exe" "ppm2tiff.exe" "pngfix.exe" "png-fix-itxt.exe" "pkcs1-conv.exe" "pcretest.exe" "pcregrep.exe" "pcre-config" "pango-view.exe" "pal2rgb.exe" "p11tool.exe" "p11-kit.exe" "openssl.exe" "ocsptool.exe" "ngettext.exe" "nettle-pbkdf2.exe" "nettle-lfib-stream.exe" "nettle-hash.exe" "ncursesw6-config" "msguniq.exe" "msgunfmt.exe" "msgmerge.exe" "msginit.exe" "msggrep.exe" "msgfmt.exe" "msgfilter.exe" "msgexec.exe" "msgen.exe" "msgconv.exe" "msgcomm.exe" "msgcmp.exe" "msgcat.exe" "msgattrib.exe" "minizip.exe" "miniunzip.exe" "lzmainfo.exe" "lzmadec.exe" "linkicc.exe" "libXpm-noX4.dll" "libxml2-2.dll" "libwinpthread-1.dll" "libunistring-2.dll" "libturbojpeg-0.dll" "libtre-5.dll" "libtiffxx-5.dll" "libtiff-5.dll" "libtermcap-0.dll" "libtasn1-6.dll" "libsystre-0.dll" "libstdc++-6.dll" "libssp-0.dll" "librsvg-2-2.dll" "libreadline7.dll" "libquadmath-0.dll" "libpython2.7.dll" "libpng16-config" "libpng16-16.dll" "libpng-config" "libpixman-1-0.dll" "libpcreposix-0.dll" "libpcrecpp-0.dll" "libpcre32-0.dll" "libpcre16-0.dll" "libpcre-1.dll" "libpangowin32-1.0-0.dll" "libpangoft2-1.0-0.dll" "libpangocairo-1.0-0.dll" "libpango-1.0-0.dll" "libp11-kit-0.dll" "libnettle-6.dll" "libminizip-1.dll" "liblzo2-2.dll" "liblzma-5.dll" "liblcms2-2.dll" "libjpeg-8.dll" "libjasper-4.dll" "libintl-8.dll" "libidn2-0.dll" "libiconv-2.dll" "libhogweed-4.dll" "libhistory7.dll" "libharfbuzz-icu-0.dll" "libharfbuzz-gobject-0.dll" "libharfbuzz-0.dll" "libgthread-2.0-0.dll" "libgraphite2.dll" "libgomp-1.dll" "libgobject-2.0-0.dll" "libgnutlsxx-28.dll" "libgnutls-30.dll" "libgmpxx-4.dll" "libgmp-10.dll" "libgmodule-2.0-0.dll" "libglib-2.0-0.dll" "libgio-2.0-0.dll" "libgif-7.dll" "libgettextsrc-0-19-8-1.dll" "libgettextpo-0.dll" "libgettextlib-0-19-8-1.dll" "libgdk_pixbuf-2.0-0.dll" "libgdbm-4.dll" "libgcc_s_seh-1.dll" "libfreetype-6.dll" "libfreeglut.dll" "libfontconfig-1.dll" "libffi-6.dll" "libexpat-1.dll" "libeay32.dll" "libcroco-0.6-3.dll" "libcharset-1.dll" "libcairo-script-interpreter-2.dll" "libcairo-gobject-2.dll" "libcairo-2.dll" "libbz2-1.dll" "libatomic-1.dll" "libasprintf-0.dll" "jpgicc.exe" "jpegtran.exe" "jasper.exe" "imginfo.exe" "imgcmp.exe" "idn2.exe" "idle" "hb-view.exe" "hb-shape.exe" "hb-ot-shape-closure.exe" "gspawn-win64-helper.exe" "gspawn-win64-helper-console.exe" "gsettings.exe" "gresource.exe" "gr2fonttest.exe" "gobject-query.exe" "gnutls-serv.exe" "gnutls-cli.exe" "gnutls-cli-debug.exe" "glib-mkenums.exe" "glib-mkenums-script.py" "glib-gettextize" "glib-genmarshal.exe" "glib-genmarshal-script.py" "glib-compile-schemas.exe" "glib-compile-resources.exe" "gio.exe" "gio-querymodules.exe" "gettextize" "gettext.sh" "gettext.exe" "gdk-pixbuf-thumbnailer.exe" "gdk-pixbuf-query-loaders.exe" "gdk-pixbuf-pixdata.exe" "gdk-pixbuf-csource.exe" "gdbus.exe" "gdbus-codegen.exe" "gdbus-codegen-script.py" "gdbm_load.exe" "gdbm_dump.exe" "gdbmtool.exe" "freetype-config" "fc-validate.exe" "fc-scan.exe" "fc-query.exe" "fc-pattern.exe" "fc-match.exe" "fc-list.exe" "fc-cat.exe" "fc-cache.exe" "fax2tiff.exe" "fax2ps.exe" "etags.exe" "envsubst.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-26.3.exe" "edit_test_dll.exe" "edit_test.exe" "edit.dll" "ebrowse.exe" "djpeg.exe" "cxpm-noX.exe" "ctags.exe" "csslint-0.6.exe" "croco-0.6-config" "cjpeg.exe" "certtool.exe" "bzmore" "bzless" "bzip2recover.exe" "bzip2.exe" "bzgrep" "bzfgrep" "bzegrep" "bzdiff" "bzcmp" "bzcat.exe" "bunzip2.exe" "autopoint" "asn1Parser.exe" "asn1Decoding.exe" "asn1Coding.exe" "addpm.exe" "2to3" "../" "./")
-
- ("c:/Users/srsmith/" (24134 6583 0 0) "workspace/" "Videos/" "VIA/" "ti/" "Templates/" "Teamcenter/" "Start Menu/" "Siemens/" "SendTo/" "Searches/" "Saved Games/" "Roaming/" "Recent/" "PrintHood/" "pmdb.json" "Pictures/" "OneDrive - Altec Ind/" "OneDrive/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "MicrosoftEdgeBackups/" "Mercurial.ini" "Local Settings/" "Links/" "IntelGraphicsProfiles/" "Intel/" "FCCCache/" "fcc.873356132579439739.log.lck" "fcc.873356132579439739.log" "Favorites/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".TI/" ".ssh/" ".srsmith_lock_RO-PC0H397J/" ".QtWebEngineProcess/" ".PyCharmCE2017.1/" ".onion/" ".LSC/" ".kdiff3rc" ".idlerc/" ".gitconfig" ".easyhg/" ".config/" ".cisco/" ".bash_history" ".altec-hg/" "../" "./")
-
- ("c:/ControlRepos/py_jira/" (24133 24359 0 0) "timeutils.py" "orgnode.py" "main.py" "jira_create_task.py" "jira_api.py" "init_custom_prefs.py" "init-jira.el" "disk_cache.py" "altec_bundle" ".gitignore" ".git/" "../" "./")
-
- ("c:/ControlRepos/" (24133 23576 0 0) "simulink_builder/" "RabbitHole/" "py_jira/" "LMAPVerifier/" "LibStrucProp/" "LibraryBlocks/" "kvaserccpformatter/" "iCADI/" "hed_target/" "genesis_target/" "Fremont/" "ESeriesBR/" "ESeriesAR/" "Crexodus/" "Corvette/" "Claptrap/" "BlocksetDesignerTest/" "alpycan_tools/" "../" "./")
 
  ("c:/Users/" (23867 51279 0 0) "Temp/" "sstandi/" "srsmith/" "Public/" "ojryan/" "jlorman/" "desktop.ini" "Default User/" "Default/" "CMDSAccts/" "bsericks/" "bljacks.apa/" "bljacks.ada/" "All Users/" "../" "./")
 
  ("c:/Users/srsmith/AppData/" (23867 51279 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
-
- ("c:/Users/srsmith/AppData/Roaming/" (24133 30078 0 0) "Zoom/" "ZEON/" "Yammer/" "X-Rite/" "webex/" "Visual Studio Code/" "Vector/" "TortoiseSVN/" "TortoiseHg/" "TortoiseGit/" "ToolboxManager/" "Sun/" "Subversion/" "Sublime Text 3/" "Spotify/" "SolidWorks/" "Skype/" "simulink_build_script_gen.txt" "ScreenToGif/" "S-1-5-21-2092466158-773749350-860360866-52562-dmpu" "S-1-5-21-2092466158-773749350-860360866-52562-dm2" "S-1-5-21-2092466158-773749350-860360866-52562" "S-1-5-20-dmpu" "S-1-5-20-dm2" "S-1-5-19-dmpu" "S-1-5-19-dm2" "S-1-5-18-dmpu" "S-1-5-18-dm2" "S-1-5-18" "QlikTech/" "Python/" "PwrMgr/" "nView_Wallpaper/" "NVIDIA/" "nuanreg-dmpu" "nuanreg-dm2" "nuanreg" "Nuance/" "Notepad++/" "Mozilla/" "MotoTron/" "Microsoft Teams/" "Microsoft/" "Media Center Programs/" "MathWorks/" "Macromedia/" "LGHUB/" "Lenovo/" "Kvaser/" "JetBrains/" "Intel/" "inkscape/" "Identities/" "Greenshot/" "FLEXnet/" "EDrawings/" "Dual Monitor Tools/" "DraftSight/" "DassaultSystemes/" "Dassault Systemes/" "Corsair/" "Code/" "CCPSignalHolder.m" "ATT Connect/" "Apple Computer/" "Altec_Rainmeter/" "AltecToolManagerDev/" "AltecToolManager/" "AltecMATLABFiles/" "agenda/" "Adobe/" ".notes~" ".notes" ".emacs.d/" ".DEFAULT-dmpu" ".DEFAULT-dm2" ".DEFAULT" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
