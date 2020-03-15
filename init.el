@@ -108,6 +108,16 @@
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
 				 (org-agenda-files :maxlevel . 9))))
 ;; Clock setup
+;; Resume clocking task when emacs is restarted
+(org-clock-persistence-insinuate)
+;; Save the running clock and all clock history when exiting Emacs, load it on startup
+(setq org-clock-persist t)
+;; Do not prompt to resume an active clock
+(setq org-clock-persist-query-resume nil)
+;; Enable auto clock resolution for finding open clocks
+(setq org-clock-auto-clock-resolution (quote when-no-clock-is-running))
+;; Include current clocking task in clock reports
+(setq org-clock-report-include-clocking-task t)
 (setq org-clock-history-length 23)
 (setq org-completion-use-ido t)
 (setq org-clock-in-resume t)
