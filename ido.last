@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("c:/ControlRepos/py_jira/" . "py_jira/")
  ("~/" . ".emacs.d/")
  ("c:/Users/srsmith/AppData/" . "Roaming/")
  ("c:/Users/srsmith/" . "AppData/")
@@ -15,42 +16,45 @@
 (
  "c:/Users/srsmith/AppData/Roaming/agenda/"
  "c:/Users/srsmith/AppData/Roaming/.emacs.d/"
- "c:/ControlRepos/py_jira/"
  "c:/Users/srsmith/AppData/Roaming/"
+ "c:/ControlRepos/py_jira/py_jira/"
+ "c:/ControlRepos/py_jira/"
  "~/.emacs.d/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "meetings.org"
- "prod_supp.org"
+ "refile.org"
+ "proc_imp.org"
  "work.org"
  "init.el"
- "init-jira.el"
- "refile.org"
- "main.py"
+ "prof_dev.org"
+ "notes.org"
  "jira_api.py"
- "norang.el"
- "org-habit.el"
+ "meetings.org"
+ "prod_supp.org"
+ "init-jira.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/srsmith/AppData/Roaming/agenda/" (24157 33210 0 0) "work.org" "time_off.org" "refile.org" "prof_dev.org" "prod_supp.org" "proc_imp.org" "notes.org" "meetings.org" "hed_od.org" "genesis_od.org" "email.org" "contacts.org" ".#work.org" "#work.org#" "../" "./")
+ ("c:/Users/srsmith/AppData/Roaming/agenda/" (24537 1919 0 0) "work.org" "time_off.org" "refile.org" "prof_dev.org" "prod_supp.org" "proc_imp.org" "notes.org" "meetings.org" "hed_od.org" "genesis_od.org" "email.org" "contacts.org" "../" "./")
 
- ("~/.emacs.d/" (24156 39018 0 0) "tlc.el" "org-habit.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "helm-master/" "elpa/" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "backups/" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
+ ("~/.emacs.d/" (24536 19888 0 0) "tlc.el" "org-habit.el" "org-clock-save.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "helm-master/" "elpa/" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "backups/" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/srsmith/AppData/Roaming/.emacs.d/" (24156 39018 0 0) "tlc.el" "org-habit.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "helm-master/" "elpa/" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "backups/" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/srsmith/AppData/Roaming/" (24521 21076 0 0) "Zoom/" "ZEON/" "Yammer/" "X-Rite/" "webex/" "vstelemetry/" "Visual Studio Setup/" "Visual Studio Code/" "Vector/" "TortoiseSVN/" "TortoiseHg/" "TortoiseGit/" "ToolboxManager/" "Teams/" "Synapse3/" "Sun/" "Subversion/" "Sublime Text 3/" "Spotify/" "spacemacs/" "SolidWorks/" "Skype/" "simulink_build_script_gen.txt" "ScreenToGif/" "S-1-5-21-2092466158-773749350-860360866-52562-dmpu" "S-1-5-21-2092466158-773749350-860360866-52562-dm2" "S-1-5-21-2092466158-773749350-860360866-52562" "S-1-5-20-dmpu" "S-1-5-20-dm2" "S-1-5-19-dmpu" "S-1-5-19-dm2" "S-1-5-18-dmpu" "S-1-5-18-dm2" "S-1-5-18" "QlikTech/" "Python/" "PwrMgr/" "nView_Wallpaper/" "NVIDIA/" "nuanreg-dmpu" "nuanreg-dm2" "nuanreg" "Nuance/" "mplab_ipe/" "mplab_ide/" "Mozilla/" "MotoTron/" "Microsoft Visual Studio/" "Microsoft Teams/" "Microsoft/" "Media Center Programs/" "MathWorks/" "Macromedia/" "Logishrd/" "LGHUB/" "Lenovo/" "Kvaser/" "KeePass/" "JetBrains/" "Jedi/" "java/" "Intel/" "inkscape/" "Identities/" "Greenshot/" "FLEXnet/" "FileOpen/" "EDrawings/" "Dual Monitor Tools/" "DraftSight/" "debug.log" "DassaultSystemes/" "Dassault Systemes/" "Corsair/" "Code/" "CCPSignalHolder.m" "ATT Connect/" "Atlassian/" "Apple Computer/" "Altec_Rainmeter/" "AltecToolManagerDev/" "AltecToolManager/" "AltecMATLABFiles/" "agenda/" "Adobe/" ".spacemacs" ".notes~" ".notes" ".emacs.d.spacemacs/" ".emacs.d/" ".DEFAULT-dmpu" ".DEFAULT-dm2" ".DEFAULT" "../" "./")
 
- ("c:/ControlRepos/py_jira/" (24153 46841 0 0) "__pycache__/" "time_config.py" "tests/" "setup.py" "secrets.py" "requirements.txt" "references/" "README.md" "py_jira/" "orgnode.py" "issue_prefs.json" "init-jira.el" "config.py" "cache/" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/srsmith/AppData/Roaming/.emacs.d/" (24536 19888 0 0) "tlc.el" "org-habit.el" "org-clock-save.el" "norang.el" "init.el~" "init.el" "ido.last~" "ido.last" "helm-master/" "elpa/" "csharp-mode.el" "bphelps-test-theme.el" "bootstrap.el" "bookmarks" "blankmode.el" "backups/" "auto-save-list/" "abbrev_defs.el" ".org-id-locations" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/srsmith/AppData/Roaming/" (24147 54268 0 0) "Zoom/" "ZEON/" "Yammer/" "X-Rite/" "webex/" "Visual Studio Code/" "Vector/" "TortoiseSVN/" "TortoiseHg/" "TortoiseGit/" "ToolboxManager/" "Sun/" "Subversion/" "Sublime Text 3/" "Spotify/" "SolidWorks/" "Skype/" "simulink_build_script_gen.txt" "ScreenToGif/" "S-1-5-21-2092466158-773749350-860360866-52562-dmpu" "S-1-5-21-2092466158-773749350-860360866-52562-dm2" "S-1-5-21-2092466158-773749350-860360866-52562" "S-1-5-20-dmpu" "S-1-5-20-dm2" "S-1-5-19-dmpu" "S-1-5-19-dm2" "S-1-5-18-dmpu" "S-1-5-18-dm2" "S-1-5-18" "QlikTech/" "Python/" "PwrMgr/" "nView_Wallpaper/" "NVIDIA/" "nuanreg-dmpu" "nuanreg-dm2" "nuanreg" "Nuance/" "Mozilla/" "MotoTron/" "Microsoft Teams/" "Microsoft/" "Media Center Programs/" "MathWorks/" "Macromedia/" "LGHUB/" "Lenovo/" "Kvaser/" "JetBrains/" "Jedi/" "Intel/" "inkscape/" "Identities/" "Greenshot/" "FLEXnet/" "EDrawings/" "Dual Monitor Tools/" "DraftSight/" "DassaultSystemes/" "Dassault Systemes/" "Corsair/" "Code/" "CCPSignalHolder.m" "ATT Connect/" "Apple Computer/" "Altec_Rainmeter/" "AltecToolManagerDev/" "AltecToolManager/" "AltecMATLABFiles/" "agenda/" "Adobe/" ".notes~" ".notes" ".emacs.d/" ".DEFAULT-dmpu" ".DEFAULT-dm2" ".DEFAULT" "../" "./")
+ ("c:/ControlRepos/py_jira/py_jira/" (24296 52814 0 0) "__pycache__/" "__main__.py" "__init__.py" "utility_functions.py" "upload_jira_time.py" "timeutils.py" "task_events.py" "jira_time_from_config.py" "jira_shell.py" "jira_preferences.py" "jira_investigation_functions.py" "jira_display_task_info.py" "jira_create_task.py" "jira_api.py" "../" "./")
+
+ ("c:/ControlRepos/py_jira/" (24296 52814 0 0) "__pycache__/" "time_config.py" "tests/" "setup.py" "secrets.py" "requirements.txt" "references/" "README.md" "py_jira/" "orgnode.py" "issue_prefs.json" "init-jira.el" "config.py" "cache/" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/srsmith/" (24196 37444 0 0) "workspace/" "Videos/" "VIA/" "ti/" "Templates/" "Teamcenter/" "Start Menu/" "Siemens/" "SendTo/" "Searches/" "Saved Games/" "Roaming/" "Recent/" "PrintHood/" "pmdb.json" "Pictures/" "OneDrive - Altec Ind/" "OneDrive/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "MicrosoftEdgeBackups/" "Mercurial.ini" "Local Settings/" "Links/" "IntelGraphicsProfiles/" "Intel/" "FCCCache/" "fcc.7093978326942360414.log" "Favorites/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".TI/" ".ssh/" ".srsmith_lock_RO-PC0H397J/" ".QtWebEngineProcess/" ".pylint.d/" ".PyCharmCE2017.1/" ".onion/" ".LSC/" ".kdiff3rc" ".idlerc/" ".gitconfig" ".emacs.d/" ".easyhg/" ".config/" ".cisco/" ".bash_history" ".altec-hg/" "../" "./")
 
  ("~/" (24142 58522 0 0) "Zoom/" "ZEON/" "Yammer/" "X-Rite/" "webex/" "Visual Studio Code/" "Vector/" "TortoiseSVN/" "TortoiseHg/" "TortoiseGit/" "ToolboxManager/" "Sun/" "Subversion/" "Sublime Text 3/" "Spotify/" "SolidWorks/" "Skype/" "simulink_build_script_gen.txt" "ScreenToGif/" "S-1-5-21-2092466158-773749350-860360866-52562-dmpu" "S-1-5-21-2092466158-773749350-860360866-52562-dm2" "S-1-5-21-2092466158-773749350-860360866-52562" "S-1-5-20-dmpu" "S-1-5-20-dm2" "S-1-5-19-dmpu" "S-1-5-19-dm2" "S-1-5-18-dmpu" "S-1-5-18-dm2" "S-1-5-18" "QlikTech/" "Python/" "PwrMgr/" "nView_Wallpaper/" "NVIDIA/" "nuanreg-dmpu" "nuanreg-dm2" "nuanreg" "Nuance/" "Mozilla/" "MotoTron/" "Microsoft Teams/" "Microsoft/" "Media Center Programs/" "MathWorks/" "Macromedia/" "LGHUB/" "Lenovo/" "Kvaser/" "JetBrains/" "Intel/" "inkscape/" "Identities/" "Greenshot/" "FLEXnet/" "EDrawings/" "Dual Monitor Tools/" "DraftSight/" "DassaultSystemes/" "Dassault Systemes/" "Corsair/" "Code/" "CCPSignalHolder.m" "ATT Connect/" "Apple Computer/" "Altec_Rainmeter/" "AltecToolManagerDev/" "AltecToolManager/" "AltecMATLABFiles/" "agenda/" "Adobe/" ".notes~" ".notes" ".emacs.d/" ".DEFAULT-dmpu" ".DEFAULT-dm2" ".DEFAULT" "../" "./")
 
  ("c:/ControlRepos/" (24142 57748 0 0) "simulink_builder/" "Shane_Test/" "RabbitHole/" "py_jira/" "MBDTemplates/" "LMAPVerifier/" "LibStrucProp/" "LibraryBlocks/" "kvaserccpformatter/" "iCADI/" "hed_target/" "genesis_target/" "Fremont/" "ESeriesBR/" "ESeriesAR/" "Crexodus/" "Corvette/" "Claptrap/" "BlocksetDesignerTest/" "alpycan_tools/" "../" "./")
-
- ("c:/Users/srsmith/" (24145 39338 0 0) "workspace/" "Videos/" "VIA/" "ti/" "Templates/" "Teamcenter/" "Start Menu/" "Siemens/" "SendTo/" "Searches/" "Saved Games/" "Roaming/" "Recent/" "PrintHood/" "pmdb.json" "Pictures/" "OneDrive - Altec Ind/" "OneDrive/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "MicrosoftEdgeBackups/" "Mercurial.ini" "Local Settings/" "Links/" "IntelGraphicsProfiles/" "Intel/" "FCCCache/" "fcc.873356132579439739.log.lck" "fcc.873356132579439739.log" "Favorites/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".TI/" ".ssh/" ".srsmith_lock_RO-PC0H397J/" ".QtWebEngineProcess/" ".PyCharmCE2017.1/" ".onion/" ".LSC/" ".kdiff3rc" ".idlerc/" ".gitconfig" ".easyhg/" ".config/" ".cisco/" ".bash_history" ".altec-hg/" "../" "./")
 
  ("c:/emacs/" (24123 20611 0 0) "ssl/" "share/" "libexec/" "lib/" "include/" "etc/" "bin/" "../" "./")
 

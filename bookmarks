@@ -13,10 +13,10 @@
  (rear-context-string . "ISSUE:GENESIS:\n\n")
  (position . 39))
 ("org-refile-last-stored"
- (filename . "~/agenda/prod_supp.org")
- (front-context-string . "** TODO Evaluate")
- (rear-context-string . " crank cycles. \n")
- (position . 642))
+ (filename . "~/agenda/work.org")
+ (front-context-string . "** TODO [[https:")
+ (rear-context-string . "Attended review\n")
+ (position . 91059))
 ("org-capture-last-stored"
  (filename . "~/.notes")
  (front-context-string . "** TODO Project ")
