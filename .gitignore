@@ -1,5 +1,6 @@
 # Ignore package directories
 /elpa
+/server
 
 # Ignore auto save files
 auto-save-list
