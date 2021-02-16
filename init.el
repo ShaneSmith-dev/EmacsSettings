@@ -1,5 +1,6 @@
 ;; Set up packages
 (require 'package)
+(require 'use-package)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t) ; I want to use stable ones
 (package-initialize)
 
@@ -7,23 +8,49 @@
 (add-to-list 'load-path "~/.emacs.d/elpa")
 
 ;; Set up helm-mode
-(global-set-key (kbd "M-x") #'helm-M-x)
-(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(helm-mode 1) ;; Turns on helm mode globally
+;;(global-set-key (kbd "M-x") #'helm-M-x)
+;;(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+;;(global-set-key (kbd "C-x C-f") #'helm-find-files)
+;;(helm-mode 1) ;; Turns on helm mode globally
+
+;; Set up ivy mode (trying out ivy instead)
+(require 'ivy)
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+(global-set-key (kbd "C-s") 'swiper-isearch)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "M-y") 'counsel-yank-pop)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "C-x b") 'ivy-switch-buffer)
+(global-set-key (kbd "C-c v") 'ivy-push-view)
+(global-set-key (kbd "C-c V") 'ivy-pop-view)
+
+;; Setting up Magit
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (global-display-line-numbers-mode) ; Set up line numbers
 
 ;; Set up theme TODO: Move this into it's own file
-(require 'modus-vivendi-theme)    ;Dark Theme
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-molokai t)
 
-;; Set customization options for dark theme TODO: Confirm number arguments work, text options failed
-(setq modus-themes-slanted-constructs t    ; Controls whether italics are used
-      modus-themes-syntax 6       ; Lots more colors are used than default 
-      modus-themes-intense-hl-line t       ; Highlights active line
-      modus-themes-org-blocks 3)      ; Accented background for org blocks
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
 
-(load-theme 'modus-vivendi t)     ;Dark Theme
+;; Neotree, a directory viewer (not sure how useful this is)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 
 ;; Org Mode Setup TODO: Move this into it's own file
@@ -758,3 +785,16 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
 (global-set-key (kbd "<f9> I") 'bh/punch-in) ; This is a specific punch in function
 (global-set-key (kbd "<f9> O") 'bh/punch-out) ; This is a specific punch out function
 (global-set-key (kbd "<f11>") 'org-clock-goto) ; Goto running clock
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
