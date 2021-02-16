@@ -1,10 +1,5 @@
-# -*- mode: gitignore; -*-
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
+# Ignore package directories
+/elpa
+
+# Ignore auto save files
 auto-save-list
-tramp
-*.last
-.\#*
