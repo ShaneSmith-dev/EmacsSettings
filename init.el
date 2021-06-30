@@ -1,11 +1,27 @@
 ;; Set up packages
 (require 'package)
-(require 'use-package)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t) ; I want to use stable ones
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")
+			 ("elpa" . "https://elpa.gnu.org/packages/")))
 (package-initialize)
+;; do this on some sort of daily or weekly time point?
+;; such that melpa and stuff could still be reachable if not used in a long time
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(setq use-package-verbose t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-buffer-menu t)
+(setq inhibit-startup-screen t)
+
+(require 'use-package)
+(setq use-package-always-ensure t)
 
 ;; Set up location for external packages
-(add-to-list 'load-path "~/.emacs.d/elpa")
+;; (add-to-list 'load-path "~/.emacs.d/elpa")
 
 ;; Set up helm-mode
 ;;(global-set-key (kbd "M-x") #'helm-M-x)
@@ -14,22 +30,23 @@
 ;;(helm-mode 1) ;; Turns on helm mode globally
 
 ;; Set up ivy mode (trying out ivy instead)
-(require 'ivy)
+(use-package ivy
+  :ensure t)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
-(global-set-key (kbd "C-s") 'swiper-isearch)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "M-y") 'counsel-yank-pop)
-(global-set-key (kbd "<f1> f") 'counsel-describe-function)
-(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+;;(global-set-key (kbd "C-s") 'swiper-isearch)
+;;(global-set-key (kbd "M-x") 'counsel-M-x)
+;;(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+;;(global-set-key (kbd "M-y") 'counsel-yank-pop)
+;;(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+;;(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 (global-set-key (kbd "C-c v") 'ivy-push-view)
 (global-set-key (kbd "C-c V") 'ivy-pop-view)
 
 ;; Setting up Magit
-(require 'magit)
+(use-package magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (global-display-line-numbers-mode) ; Set up line numbers
@@ -49,7 +66,7 @@
   (doom-themes-org-config))
 
 ;; Neotree, a directory viewer (not sure how useful this is)
-(require 'neotree)
+(use-package neotree)
 (global-set-key [f8] 'neotree-toggle)
 
 
@@ -73,8 +90,8 @@
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
 
-(require 'org) ; Org mode
-(require 'org-id) ; Unique ids for org mode tasks
+(use-package org) ; Org mode
+;; (use-package org-id) ; Unique ids for org mode tasks
 (add-to-list 'org-modules 'org-habit)
 ;; (add-to-list 'org-modules 'org-checklist) ; Checklist functionality for org mode tasks TODO: Not working, fix
 
@@ -773,7 +790,7 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
       next-headline)))
 
 ;; Py-Jira setup
-(load "C:/ControlRepos/py_jira/init-jira.el")
+;(load "C:/ControlRepos/py_jira/init-jira.el")
 
 ;; Custom Key Bindings TODO: Split this up among the other files, or its own file?
 ;; TODO: Group all key bindings spread throughout this file
@@ -791,7 +808,8 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa)))
+   (quote
+    (org-id magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
