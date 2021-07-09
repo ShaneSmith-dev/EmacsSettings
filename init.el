@@ -20,24 +20,12 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; Set up helm-mode
-;;(global-set-key (kbd "M-x") #'helm-M-x)
-;;(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-;;(global-set-key (kbd "C-x C-f") #'helm-find-files)
-;;(helm-mode 1) ;; Turns on helm mode globally
-
-;; Set up ivy mode (trying out ivy instead)
+;; Set up ivy mode
 (use-package ivy
   :ensure t)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
-;;(global-set-key (kbd "C-s") 'swiper-isearch)
-;;(global-set-key (kbd "M-x") 'counsel-M-x)
-;;(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-;;(global-set-key (kbd "M-y") 'counsel-yank-pop)
-;;(global-set-key (kbd "<f1> f") 'counsel-describe-function)
-;;(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 (global-set-key (kbd "C-c v") 'ivy-push-view)
 (global-set-key (kbd "C-c V") 'ivy-pop-view)
@@ -67,7 +55,6 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 (setq projectile-indexing-method 'alien)
-
 
 ;; Org Mode Setup TODO: Move this into it's own file
 ;; NOTE: Much of this is copied from Bernt Hansen's excellent org mode resource at http://doc.norang.ca/org-mode.html
@@ -154,7 +141,7 @@
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
 (setq org-capture-templates
       (quote (("t" "todo" entry (file "~/agenda/refile.org")
-               "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
+               "* TODO %?\n%U\n%a\n")
               ("r" "respond" entry (file "~/agenda/refile.org")
                "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
               ("n" "note" entry (file "~/agenda/refile.org")
