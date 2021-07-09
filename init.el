@@ -20,9 +20,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; Set up location for external packages
-;; (add-to-list 'load-path "~/.emacs.d/elpa")
-
 ;; Set up helm-mode
 ;;(global-set-key (kbd "M-x") #'helm-M-x)
 ;;(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
@@ -65,9 +62,11 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
-;; Neotree, a directory viewer (not sure how useful this is)
-(use-package neotree)
-(global-set-key [f8] 'neotree-toggle)
+;; Projectile, a project manager for emacs
+(use-package projectile)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+(setq projectile-indexing-method 'alien)
 
 
 ;; Org Mode Setup TODO: Move this into it's own file
@@ -809,7 +808,7 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org-id magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa))))
+    (projectile org-id magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
