@@ -10,6 +10,6 @@
 ("org-capture-last-stored"
  (filename . "~/agenda/refile.org")
  (front-context-string . "* TODO Release B")
- (rear-context-string . "ILETAGS: REFILE\n")
- (position . 20))
+ (rear-context-string . "BRIM AXIS Pages\n")
+ (position . 155))
 )
