@@ -51,7 +51,7 @@
 (load-file "~/.emacs.d/org-settings.el")
 
 ;; Py-Jira setup
-;(load "C:/ControlRepos/py_jira/init-jira.el")
+(load "~/ControlRepos/py_jira/init-jira.el")
 
 ;; Custom Key Bindings TODO: Split this up among the other files, or its own file?
 ;; TODO: Group all key bindings spread throughout this file
@@ -63,6 +63,7 @@
 (global-set-key (kbd "<f9> I") 'bh/punch-in) ; This is a specific punch in function
 (global-set-key (kbd "<f9> O") 'bh/punch-out) ; This is a specific punch out function
 (global-set-key (kbd "<f11>") 'org-clock-goto) ; Goto running clock
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

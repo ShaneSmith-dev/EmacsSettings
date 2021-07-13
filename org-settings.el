@@ -84,16 +84,14 @@
 (setq org-capture-templates
       (quote (("t" "todo" entry (file "~/agenda/refile.org")
                "* TODO %?\n%U\n%a\n")
-              ("r" "respond" entry (file "~/agenda/refile.org")
-               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
               ("n" "note" entry (file "~/agenda/refile.org")
-               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+               "* %? :NOTE:\n%U\n%a\n")
               ("j" "Journal" entry (file+datetree "~/agenda/journal.org")
-               "* %?\n%U\n" :clock-in t :clock-resume t)
+               "* %?\n%U\n")
               ("w" "org-protocol" entry (file "~/agenda/refile.org")
                "* TODO Review %c\n%U\n" :immediate-finish t)
               ("m" "Meeting" entry (file "~/agenda/refile.org")
-               "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
+               "* MEETING with %? :MEETING:\n%U")
               ("p" "Phone call" entry (file "~/agenda/refile.org")
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
               ("h" "Habit" entry (file "~/agenda/refile.org")
@@ -228,7 +226,7 @@
 ;                                   (0900 1100 1300 1500 1700))))
 
 ;; Display tags farther right
-(setq org-agenda-tags-column -80)
+(setq org-agenda-tags-column -90)
 
 ;;
 ;; Agenda sorting functions
