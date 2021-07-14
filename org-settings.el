@@ -28,6 +28,7 @@
 			       "~/agenda/Management"
 			       "~/agenda/ProcessImprovement"
 			       "~/agenda/Projects"
+			       "~/agenda/Sustainment"
 			       "~/agenda/Support"
 			       "~/agenda/Timeoff")))
 
