@@ -123,7 +123,7 @@
           '(lambda () (hl-line-mode 1))
           'append)
 
-(defvar ss/org-agenda-prefix-format "     %-15:c")
+(defvar ss/org-agenda-prefix-format " %-12:c%?-12t% s")
 (setq org-agenda-todo-keyword-format "%-12s")
 
 ;; Custom agenda command definitions

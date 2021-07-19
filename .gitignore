@@ -5,3 +5,13 @@
 # Ignore auto save files
 auto-save-list
 *~
+
+# Ignore
+.org-id-locations
+org-clock-save.el
+bookmarks
+eshell
+projectile-bookmarks.eld
+recentf
+transient
+url
