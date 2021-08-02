@@ -46,6 +46,7 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 (setq projectile-indexing-method 'alien)
+(setq projectile-project-search-path '("~/.emacs.d" "~/ControlRepos" "~/agenda"))
 
 ;; Load from additional files
 (load-file "~/.emacs.d/themes.el")

@@ -330,8 +330,7 @@ Late deadlines first, then scheduled, then non-late deadlines"
 (setq org-clock-history-length 23)
 ;; Resume clocking task on clock-in if the clock is open
 (setq org-clock-in-resume t)
-;; Change tasks to NEXT when clocking in
-(setq org-clock-in-switch-to-state 'bh/clock-in-to-next)
+
 ;; Separate drawers for clocking and logs
 ; (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
 ;; Don;t Save clock data and state changes and notes in the LOGBOOK drawer
@@ -371,19 +370,6 @@ Late deadlines first, then scheduled, then non-late deadlines"
   (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
-
-(defun bh/clock-in-to-next (kw)
-  "Switch a task from TODO to NEXT when clocking in.
-Skips capture tasks, projects, and subprojects.
-Switch projects and subprojects from NEXT back to TODO"
-  (when (not (and (boundp 'org-capture-mode) org-capture-mode))
-    (cond
-     ((and (member (org-get-todo-state) (list "TODO"))
-           (bh/is-task-p))
-      "NEXT")
-     ((and (member (org-get-todo-state) (list "NEXT"))
-           (bh/is-project-p))
-      "TODO"))))
 
 (defun bh/find-project-task ()
   "Move point to the parent (project) task if any"
