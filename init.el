@@ -73,7 +73,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile org-id magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa))))
+    (markdown-mode projectile org-id magit counsel all-the-icons-ivy neotree doom-themes org modus-vivendi-theme helm gnu-elpa))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

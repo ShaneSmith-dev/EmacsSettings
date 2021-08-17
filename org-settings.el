@@ -35,7 +35,8 @@
 ;; Org Mode TODO Keyword  Settings
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
+	      (sequence "MEETING(m)" "|" "DONE(d)")
+	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
 
 ;; Sets up tags to be automatically set based on task status
 (setq org-todo-state-tags-triggers
@@ -201,7 +202,7 @@
                             (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
                             (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
 			    (org-agenda-prefix-format ss/org-agenda-prefix-format)))
-		(tags "MEETING"
+		(tags-todo "MEETING"
 		      ((org-agenda-overriding-header "Meetings")
 		      (org-agenda-prefix-format ss/org-agenda-prefix-format))))))))
 
