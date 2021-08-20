@@ -180,7 +180,7 @@
                             (org-agenda-sorting-strategy
                              '(category-keep))
 			     (org-agenda-prefix-format ss/org-agenda-prefix-format)))
-                (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
+                (tags-todo "-REFILE-CANCELLED-WAITING-HOLD-MEETING/!"
                            ((org-agenda-overriding-header (concat "Standalone Tasks"
                                                                   (if bh/hide-scheduled-and-waiting-next-tasks
                                                                       ""
